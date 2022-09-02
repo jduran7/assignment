@@ -20,14 +20,13 @@ navbarItems.forEach((navBarItem, index) => {
 });
 
 function moveMarker(targetIndex) {
-  if (targetIndex == currentNavBarIndex) return;
+  if (targetIndex === currentNavBarIndex) return;
   removeTabActive(currentNavBarIndex);
   currentNavBarIndex = targetIndex;
   setTabActive(currentNavBarIndex);
 }
 
 function setTabActive(targetIndex) {
-  console.log('gonna set ', navbarItems[targetIndex]);
   navbarItems[targetIndex].classList.add(CLASSES.active);
 }
 
